@@ -19,7 +19,6 @@ for i in no_clusters: # iterate over the number of clusters
     kmeans = KMeans(n_clusters = i)
     KModel = kmeans.fit(iris.data)
     centroids = KModel.cluster_centers_
-    #print(len(iris.data))
     labels = KModel.labels_
     pd.crosstab(iris.target, KModel.labels_)
     print(len(labels))
